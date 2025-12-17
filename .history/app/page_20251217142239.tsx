@@ -7,8 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -28,15 +26,6 @@ export default function Home() {
             <span className="font-semibold">Returning User? </span>
             Click on the button below to log in
           </p>
-          <Button className="
-            w-full">
-            Login
-          </Button>
-          <div className="w-full flex flex-rows items-center justify-center">
-            <Separator className="m-4" />
-            OR
-            <Separator className="m-4" />
-          </div>
         </CardContent>
         <CardFooter>
           <p>Card Footer</p>

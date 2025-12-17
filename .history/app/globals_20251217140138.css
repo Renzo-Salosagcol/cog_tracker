@@ -3,6 +3,52 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* @theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  --animate-fade-in: fade-in 1s ease-in forwards;
+}
+
+@layer base {
+  /* Light Theme */
+  :root {
+    --background: #f8f8ff; /* Ghost White */
+    --foreground: #080808; /* Vampire Black */
+
+    --primary: #0A6A56; /* Bangladesh Green */
+    --secondary: #A82B11; /* Rufous */
+  }
+
+  /* Dark Theme */
+  .dark {
+    --background: #080808; /* Vampire Black */
+    --foreground: #f8f8ff; /* Ghost White */
+
+    --primary: #0A6A56; /* Bangladesh Green */
+    --secondary: #A82B11; /* Rufous */
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+} */
+
+@utility root-page-element {
+  @apply min-h-screen flex flex-col items-center justify-center;
+}
+
+@utility glassmorphism {
+  @apply bg-background/10 backdrop-blur-lg
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -46,8 +92,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #f8f8ff; /* Ghost White */
-  --foreground: #080808; /* Vampire Black */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -80,8 +126,8 @@
 }
 
 .dark {
-  --background: #080808; /* Vampire Black */
-  --foreground: #f8f8ff; /* Ghost White */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -120,12 +166,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@utility root-page-element {
-  @apply min-h-screen flex flex-col items-center justify-center;
-}
-
-@utility glassmorphism {
-  @apply bg-background/70 backdrop-blur-lg
 }

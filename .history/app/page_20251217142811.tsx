@@ -33,7 +33,7 @@ export default function Home() {
             Login
           </Button>
           <div className="w-full flex flex-rows items-center justify-center">
-            <Separator className="m-4" />
+            <Separator className="w-md m-4" />
             OR
             <Separator className="m-4" />
           </div>

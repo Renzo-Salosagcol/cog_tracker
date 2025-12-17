@@ -46,8 +46,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #f8f8ff; /* Ghost White */
-  --foreground: #080808; /* Vampire Black */
+  --background: #f8f8ff;
+  --foreground: #080808;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -80,8 +80,8 @@
 }
 
 .dark {
-  --background: #080808; /* Vampire Black */
-  --foreground: #f8f8ff; /* Ghost White */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -127,5 +127,5 @@
 }
 
 @utility glassmorphism {
-  @apply bg-background/70 backdrop-blur-lg
+  @apply bg-background/10 backdrop-blur-lg
 }

@@ -28,15 +28,6 @@ export default function Home() {
             <span className="font-semibold">Returning User? </span>
             Click on the button below to log in
           </p>
-          <Button className="
-            w-full">
-            Login
-          </Button>
-          <div className="w-full flex flex-rows items-center justify-center">
-            <Separator className="m-4" />
-            OR
-            <Separator className="m-4" />
-          </div>
         </CardContent>
         <CardFooter>
           <p>Card Footer</p>
