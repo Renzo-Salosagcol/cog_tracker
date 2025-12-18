@@ -14,22 +14,19 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import { useState } from "react";
-import { Login } from "@/components/login";
-import { Signup } from "@/components/signup";
-import { Sign } from "crypto"
 
 export default function Home() {
   return (
     <div className="root-page-element bg-background">
       <Card className="
-        glassmorphism flex flex-cols-1 w-1/3 items-center justify-center py-10">
-        <Tabs defaultValue="login" className="w-full">
-          <CardHeader className="w-full items-center flex flex-col gap-2">
-            <CardTitle className="w-full justify-center text-center text-2xl font-bold">
+        glassmorphism flex flex-cols-1 min-w-150 items-center justify-center py-10">
+        <Tabs defaultValue="login">
+          <CardHeader className="w-full items-center justify-center text-center">
+            <CardTitle className="text-xl font-bold">
               Welcome To C.O.G. Tracker
             </CardTitle>
-            <CardDescription className="w-full px-4">
-              <TabsList className="w-full justify-between">
+            <CardDescription>
+              <TabsList>
                 <TabsTrigger value="login">Login</TabsTrigger>
                 <TabsTrigger value="signup">Sign Up</TabsTrigger>
               </TabsList>
@@ -37,10 +34,10 @@ export default function Home() {
           </CardHeader>
           <CardContent className="flex flex-col items-center justify-center gap-4">
             <TabsContent value="login">
-              <Login />
+              
             </TabsContent>
             <TabsContent value="signup">
-              <Signup />
+              
             </TabsContent>
           </CardContent>
         </Tabs>

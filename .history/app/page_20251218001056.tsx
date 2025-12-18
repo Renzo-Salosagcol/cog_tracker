@@ -25,7 +25,7 @@ export default function Home() {
         glassmorphism flex flex-cols-1 w-1/3 items-center justify-center py-10">
         <Tabs defaultValue="login" className="w-full">
           <CardHeader className="w-full items-center flex flex-col gap-2">
-            <CardTitle className="w-full justify-center text-center text-2xl font-bold">
+            <CardTitle className="w-full text-xl font-bold">
               Welcome To C.O.G. Tracker
             </CardTitle>
             <CardDescription className="w-full px-4">

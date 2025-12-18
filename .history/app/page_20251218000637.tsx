@@ -22,13 +22,13 @@ export default function Home() {
   return (
     <div className="root-page-element bg-background">
       <Card className="
-        glassmorphism flex flex-cols-1 w-1/3 items-center justify-center py-10">
+        glassmorphism flex flex-cols-1 2-1/2 items-center justify-center py-10">
         <Tabs defaultValue="login" className="w-full">
-          <CardHeader className="w-full items-center flex flex-col gap-2">
-            <CardTitle className="w-full justify-center text-center text-2xl font-bold">
+          <CardHeader className="w-full items-center justify-center text-center">
+            <CardTitle className="w-full text-xl font-bold">
               Welcome To C.O.G. Tracker
             </CardTitle>
-            <CardDescription className="w-full px-4">
+            <CardDescription>
               <TabsList className="w-full justify-between">
                 <TabsTrigger value="login">Login</TabsTrigger>
                 <TabsTrigger value="signup">Sign Up</TabsTrigger>
