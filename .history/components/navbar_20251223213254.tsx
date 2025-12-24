@@ -1,10 +1,8 @@
 import { supabase } from "@/lib/supabase"
 import { Button } from "./ui/button"
-import { getUserInformation } from "@/lib/supabase"
 
 export const Navbar = () => {
-  const user = getUserInformation();
-  console.log(user);
+  const user = supabase.auth.getUser()
 
   return (
     <nav className="top-0 left-0 w-full glassmorphism fixed">

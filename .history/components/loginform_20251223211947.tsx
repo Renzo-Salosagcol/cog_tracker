@@ -20,7 +20,6 @@ import { z } from "zod"
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 
-
 const formSchema = z.object({
   email: z.string().email({
     message: "Email must be a valid email address.",

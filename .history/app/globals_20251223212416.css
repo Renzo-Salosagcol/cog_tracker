@@ -126,7 +126,7 @@
 }
 
 @utility root-page-element {
-  @apply min-h-screen flex flex-col items-center justify-center top-0 left-0 w-full;
+  @apply min-h-screen flex flex-col items-center justify-center top-0 left-0;
 }
 
 @utility glassmorphism {

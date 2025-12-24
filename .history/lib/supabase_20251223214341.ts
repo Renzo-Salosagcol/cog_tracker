@@ -12,5 +12,4 @@ export async function getUserInformation() {
     console.error('Error fetching user information:', error);
     return null;
   }
-  return data.user;
 }

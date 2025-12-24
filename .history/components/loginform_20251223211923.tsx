@@ -18,8 +18,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { supabase } from "@/lib/supabase";
-import { useRouter } from "next/navigation";
-
+import { Router } from "next/router";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -33,11 +32,10 @@ const formSchema = z.object({
 
 
 export const LoginForm = () => {
-  const router = useRouter();
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (event == "SIGNED_IN") {
-          router.push("/dashboard");
+          Router.push("/dashboard");
     }
   });
 

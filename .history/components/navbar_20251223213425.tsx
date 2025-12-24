@@ -1,9 +1,8 @@
 import { supabase } from "@/lib/supabase"
 import { Button } from "./ui/button"
-import { getUserInformation } from "@/lib/supabase"
 
 export const Navbar = () => {
-  const user = getUserInformation();
+  const user = supabase.auth.getUser()
   console.log(user);
 
   return (

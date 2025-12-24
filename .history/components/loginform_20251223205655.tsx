@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Facebook } from 'lucide-react';
 import {
@@ -18,8 +16,6 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { supabase } from "@/lib/supabase";
-import { useRouter } from "next/navigation";
-
 
 const formSchema = z.object({
   email: z.string().email({
@@ -33,13 +29,6 @@ const formSchema = z.object({
 
 
 export const LoginForm = () => {
-  const router = useRouter();
-
-  supabase.auth.onAuthStateChange((event, session) => {
-    if (event == "SIGNED_IN") {
-          router.push("/dashboard");
-    }
-  });
 
   const form = useForm({
     resolver: zodResolver(formSchema),
