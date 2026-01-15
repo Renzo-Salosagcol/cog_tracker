@@ -55,7 +55,7 @@ export default function DashboardPage() {
           <h1 className="font-bold text-2xl">
             Active Tracker Group: {group}
           </h1>
-          <Button onClick={moveToAddTrackerPage}>Add A Tracker</Button>
+          <Button>Add A Tracker</Button>
         </div>
         <Table>
           <TableHeader>

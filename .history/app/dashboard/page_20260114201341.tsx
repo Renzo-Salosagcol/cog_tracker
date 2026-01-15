@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/table"
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { supabase, getUserInformation } from "@/lib/supabase";
 
 
@@ -35,16 +34,8 @@ const trackers = [
 ]
 
 export default function DashboardPage() {
-  const router = useRouter();
   const [group, setGroup] = useState<string | null>("example-group-id");
 
-  const moveToTrackerPage = (trackerId: string) => {
-    router.push(`/dashboard/tracker/${trackerId}`);
-  }
-
-  const moveToAddTrackerPage = () => {
-    router.push(`/dashboard/add-tracker`);
-  }
 
 
   return (
@@ -55,7 +46,7 @@ export default function DashboardPage() {
           <h1 className="font-bold text-2xl">
             Active Tracker Group: {group}
           </h1>
-          <Button onClick={moveToAddTrackerPage}>Add A Tracker</Button>
+          <Button>Add A Tracker</Button>
         </div>
         <Table>
           <TableHeader>

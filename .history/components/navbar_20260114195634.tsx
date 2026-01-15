@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 
 export const Navbar = () => {
   const router = useRouter();
-  const [user, setUser] = useState(null);
+  const user = getUser();
 
   useEffect(() => {
     const getUser = async () => {
-      const supabaseUser = await getUserInformation();
-      setUser(supabaseUser);
+      const user = await getUserInformation();
+      return user;
     };
     getUser();
   }, []);
@@ -32,7 +32,7 @@ export const Navbar = () => {
   return (
     <nav className="top-0 left-0 w-full glassmorphism fixed">
       <div className="flex flex-row items-center justify-between p-2">
-        <div className="items-left">{user?.email}</div>
+        <div>{user}</div>
         <h1>C.O.G. Tracker</h1>
         <Button onClick={signOut}>Sign Out</Button>
       </div>
