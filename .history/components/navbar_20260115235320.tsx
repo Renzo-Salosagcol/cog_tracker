@@ -32,9 +32,9 @@ export const Navbar = () => {
   return (
     <nav className="top-0 left-0 w-full glassmorphism fixed">
       <div className="flex flex-row items-center justify-between p-2">
-        <div>{user?.email}</div>
-        <h1>C.O.G. Tracker</h1>
-        <Button onClick={signOut}>Sign Out</Button>
+        <div className="items-start w-full">{user?.email}</div>
+        <h1 className="w-full text-center">C.O.G. Tracker</h1>
+        <Button className="w-full" onClick={signOut}>Sign Out</Button>
       </div>
     </nav>
   )
