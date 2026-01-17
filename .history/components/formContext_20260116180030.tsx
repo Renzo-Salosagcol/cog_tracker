@@ -3,10 +3,10 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type ProductInformation = {
-  sku: number,
-  name: string,
+  product_sku: number,
+  product_name: string,
   quantity: number,
-  size: string,
+  product_size: string,
 }
 
 type FormData = {

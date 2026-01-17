@@ -86,15 +86,9 @@ export default function AddTrackerPage() {
     },
   })
 
-  const productForm = useForm({
-    resolver: zodResolver(productSchema),
-    defaultValues: {
-      product_name: "",
-      product_sku: "",
-      product_size: "",
-      quantity: 1,
-    },
-    })
+  async function checkValue(formValues: z.infer<typeof formSchema>) {
+    console.log(formValues.client_phone_number)
+  }
 
   async function onSubmit(formValues: z.infer<typeof formSchema>) {
     console.log("testing");
@@ -111,7 +105,7 @@ export default function AddTrackerPage() {
         </div>
         <Form {... form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex flex-col gap-4 space-y-1 mb-10">
+            <div className="flex flex-col gap-4 space-y-1">
               <Label className="text-2xl font-bold">Client Information</Label>
               <Separator className="space-y-2"/>
               <div className="grid grid-cols-2 gap-6">
@@ -169,7 +163,7 @@ export default function AddTrackerPage() {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 space-y-1 my-10">
+            <div className="flex flex-col gap-4 space-y-1 mt-10">
               <Label className="text-2xl font-bold">Store Information</Label>
               <Separator className="space-y-2"/>
               <div className="grid grid-cols-2 gap-6">
@@ -203,87 +197,10 @@ export default function AddTrackerPage() {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 space-y-1 my-10">
-              <Label className="text-2xl font-bold">Products Information</Label>
-              <Separator className="space-y-2"/>
-              <div>
-                <Form {... productForm}>
-                  <form
-                    onSubmit={productForm.handleSubmit((productValues) => {
-                      const currentProducts = form.getValues("products");
-                      form.setValue("products", [
-                        ...currentProducts, productValues,
-                      ]);
-                      productForm.reset();
-                    })}
-                    className="space-y-4 mb-10"
-                  >
-                    <div className="grid grid-cols-2 gap-6">
-                      <FormField
-                        control={productForm.control}
-                        name="product_name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product Name</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product name"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="product_sku"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product SKU</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product SKU"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="product_size"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product Size</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product size"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="quantity"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Quantity</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="number"
-                                placeholder="Enter quantity"
-                                {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                    <Button type="submit" className="w-full mt-10">Add Product</Button>
-                  </form>
-                </Form>
-              </div>
+            <div>
+              <Label className="text-2xl font-bold mt-10">Products Information</Label>
+              <Separator className="space-y-2 mb-4"/>
+              <Button onClick={incrementCount} className="mr-2">Add Product</Button>
             </div>
             <Button type="submit" className="w-full mt-10">Create Tracker</Button>
           </form>

@@ -218,69 +218,6 @@ export default function AddTrackerPage() {
                     })}
                     className="space-y-4 mb-10"
                   >
-                    <div className="grid grid-cols-2 gap-6">
-                      <FormField
-                        control={productForm.control}
-                        name="product_name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product Name</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product name"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="product_sku"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product SKU</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product SKU"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="product_size"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Product Size</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter product size"
-                                {...field}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={productForm.control}
-                        name="quantity"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Quantity</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="number"
-                                placeholder="Enter quantity"
-                                {...field} />
-                            </FormControl>
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                    <Button type="submit" className="w-full mt-10">Add Product</Button>
                   </form>
                 </Form>
               </div>

@@ -39,9 +39,9 @@ export default function AddProductsPage() {
         </h1>
         <Separator className="my-4" />
         <div className="flex flex-col gap-4">
-          <Label htmlFor="add-sku">Add SKU</Label>
+          <Label htmlFor="add_sku">Add SKU</Label>
           <div className="flex gap-2 w-1/2">
-            <Input id="add-sku" placeholder="Please Enter SKU"/>
+            <Input id="add_sku" placeholder="Please Enter SKU"/>
             <Button>Search SKU</Button>
           </div>
         </div>
@@ -53,16 +53,16 @@ export default function AddProductsPage() {
         <Label className="my-8">Manually Add Product</Label>
         <div className="grid grid-cols-2 gap-6 w-full">
           <div className="flex flex-col gap-2">
-            <Label htmlFor="product-name">Product Name*</Label>
-            <Input required id="product-name" placeholder="Please Enter Product Name"/>
+            <Label htmlFor="product_name">Product Name*</Label>
+            <Input required id="product_name" placeholder="Please Enter Product Name"/>
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="product-sku">Product Sku</Label>
-            <Input id="product-sku" placeholder="Please Enter Product Sku"/>
+            <Label htmlFor="product_sku">Product Sku</Label>
+            <Input id="product_sku" placeholder="Please Enter Product Sku"/>
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="product-size">Product Size</Label>
-            <Input id="product-size" placeholder="Please Enter Product Size"/>
+            <Label htmlFor="product_size">Product Size</Label>
+            <Input id="product_size" placeholder="Please Enter Product Size"/>
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="quantity">Quantity</Label>

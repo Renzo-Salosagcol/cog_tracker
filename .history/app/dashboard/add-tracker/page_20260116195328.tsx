@@ -280,7 +280,6 @@ export default function AddTrackerPage() {
                         )}
                       />
                     </div>
-                    <Button type="submit" className="w-full mt-10">Add Product</Button>
                   </form>
                 </Form>
               </div>
